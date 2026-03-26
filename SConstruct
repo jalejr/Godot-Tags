@@ -5,7 +5,7 @@ import sys
 from methods import print_error
 
 
-libname = "EXTENSION-NAME"
+libname = "tags"
 projectdir = "project"
 
 localEnv = Environment(tools=["default"], PLATFORM="")
@@ -38,7 +38,9 @@ Run the following command to download godot-cpp:
 env = SConscript("godot-cpp/SConstruct", {"env": env, "customs": customs})
 
 env.Append(CPPPATH=["src/"])
-sources = Glob("src/*.cpp")
+env.Append(CPPPATH=["tag-system-src/include"])
+env.Append(CPPPATH=["tag-system-src/src"])
+sources = Glob("tag-system-src/src/*.cpp")
 
 if env["target"] in ["editor", "template_debug"]:
     try:
