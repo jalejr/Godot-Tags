@@ -41,6 +41,7 @@ env.Append(CPPPATH=["src/"])
 env.Append(CPPPATH=["tag-system-src/include"])
 env.Append(CPPPATH=["tag-system-src/src"])
 sources = Glob("tag-system-src/src/*.cpp")
+sources += Glob("src/*.cpp")
 
 if env["target"] in ["editor", "template_debug"]:
     try:
