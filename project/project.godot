@@ -18,6 +18,14 @@ config/name="godot cpp template"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+TagSystem="*uid://ca2usx0cvg1m3"
+
 [dotnet]
 
 project/assembly_name="godot cpp template"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/tag_system/plugin.cfg")
